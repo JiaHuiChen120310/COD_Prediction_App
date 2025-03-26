@@ -19,42 +19,42 @@ with st.form("prediction_form"):
                                         "Al(SO4)3", "HCl", "Fe2(SO4)3", "NaSi", "CH3COOH", "FeSO4", "NaClO", "CaO", "RP34",
                                         "SDS", "Na-EDTA", "Combiphos L7", "HB-5265", "Ferric 40%", "H2SO4"])
     chem1 = "nan" if chem1.strip() == "" else chem1
-    chem1_dose = st.number_input("Chemical 1 Dose", min_value=0.0, step=0.0001, format="%.6f")
+    chem1_dose = st.number_input("Chemical 1 Dose ml/L", min_value=0.0, step=0.0001, format="%.6f")
 
     chem2 = st.selectbox("Chemical 2", ["nan", "HClO", "FeCl3", "FerSol", "Poly", "NaOH", "KFerSol", "PAC", "Iron Sulphate",
                                         "CaOH", "H2O2", "HNO3", "KH2PO4", "VTA", "VAT", "CTAB", "APG", "M40", "Al2(SO4)3",
                                         "Al(SO4)3", "HCl", "Fe2(SO4)3", "NaSi", "CH3COOH", "FeSO4", "NaClO", "CaO", "RP34",
                                         "SDS", "Na-EDTA", "Combiphos L7", "HB-5265", "Ferric 40%", "H2SO4"])
     chem2 = "nan" if chem2.strip() == "" else chem2
-    chem2_dose = st.number_input("Chemical 2 Dose", min_value=0.0, step=0.0001, format="%.6f")
+    chem2_dose = st.number_input("Chemical 2 Dose ml/L", min_value=0.0, step=0.0001, format="%.6f")
 
     chem3 = st.selectbox("Chemical 3", ["nan", "HClO", "FeCl3", "FerSol", "Poly", "NaOH", "KFerSol", "PAC", "Iron Sulphate",
                                         "CaOH", "H2O2", "HNO3", "KH2PO4", "VTA", "VAT", "CTAB", "APG", "M40", "Al2(SO4)3",
                                         "Al(SO4)3", "HCl", "Fe2(SO4)3", "NaSi", "CH3COOH", "FeSO4", "NaClO", "CaO", "RP34",
                                         "SDS", "Na-EDTA", "Combiphos L7", "HB-5265", "Ferric 40%", "H2SO4"])
     chem3 = "nan" if chem3.strip() == "" else chem3
-    chem3_dose = st.number_input("Chemical 3 Dose", min_value=0.0, step=0.0001, format="%.6f")
+    chem3_dose = st.number_input("Chemical 3 Dose ml/L", min_value=0.0, step=0.0001, format="%.6f")
 
     chem4 = st.selectbox("Chemical 4", ["nan", "HClO", "FeCl3", "FerSol", "Poly", "NaOH", "KFerSol", "PAC", "Iron Sulphate",
                                         "CaOH", "H2O2", "HNO3", "KH2PO4", "VTA", "VAT", "CTAB", "APG", "M40", "Al2(SO4)3",
                                         "Al(SO4)3", "HCl", "Fe2(SO4)3", "NaSi", "CH3COOH", "FeSO4", "NaClO", "CaO", "RP34",
                                         "SDS", "Na-EDTA", "Combiphos L7", "HB-5265", "Ferric 40%", "H2SO4"])
     chem4 = "nan" if chem4.strip() == "" else chem4
-    chem4_dose = st.number_input("Chemical 4 Dose", min_value=0.0, step=0.0001, format="%.6f")
+    chem4_dose = st.number_input("Chemical 4 Dose ml/L", min_value=0.0, step=0.0001, format="%.6f")
 
     chem5 = st.selectbox("Chemical 5", ["nan", "HClO", "FeCl3", "FerSol", "Poly", "NaOH", "KFerSol", "PAC", "Iron Sulphate",
                                         "CaOH", "H2O2", "HNO3", "KH2PO4", "VTA", "VAT", "CTAB", "APG", "M40", "Al2(SO4)3",
                                         "Al(SO4)3", "HCl", "Fe2(SO4)3", "NaSi", "CH3COOH", "FeSO4", "NaClO", "CaO", "RP34",
                                         "SDS", "Na-EDTA", "Combiphos L7", "HB-5265", "Ferric 40%", "H2SO4"])
     chem5 = "nan" if chem5.strip() == "" else chem5
-    chem5_dose = st.number_input("Chemical 5 Dose", min_value=0.0, step=0.0001, format="%.6f")
+    chem5_dose = st.number_input("Chemical 5 Dose ml/L", min_value=0.0, step=0.0001, format="%.6f")
 
     chem6 = st.selectbox("Chemical 6", ["nan", "HClO", "FeCl3", "FerSol", "Poly", "NaOH", "KFerSol", "PAC", "Iron Sulphate",
                                         "CaOH", "H2O2", "HNO3", "KH2PO4", "VTA", "VAT", "CTAB", "APG", "M40", "Al2(SO4)3",
                                         "Al(SO4)3", "HCl", "Fe2(SO4)3", "NaSi", "CH3COOH", "FeSO4", "NaClO", "CaO", "RP34",
                                         "SDS", "Na-EDTA", "Combiphos L7", "HB-5265", "Ferric 40%", "H2SO4"])
     chem6 = "nan" if chem6.strip() == "" else chem6
-    chem6_dose = st.number_input("Chemical 6 Dose", min_value=0.0, step=0.0001, format="%.6f")
+    chem6_dose = st.number_input("Chemical 6 Dose ml/L", min_value=0.0, step=0.0001, format="%.6f")
 
     submit = st.form_submit_button("Predict COD After Treatment")
 
