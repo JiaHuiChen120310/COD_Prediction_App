@@ -12,7 +12,7 @@ with st.form("prediction_form"):
                                     "Paper recycling", "Plastic", "RWZI", "Steel", "Wastewater", "Wastewater treatment", 
                                     "Water treatment Algae", "coatings", "waste management", "Beverages/Waste water"])
     sector = "nan" if sector.strip() == "" else sector
-    cod_before = st.number_input("COD Before Treatment", min_value=0.0, step=0.0001, format="%.6f")
+    cod_before = st.number_input("COD Before Treatment g/L", min_value=0.0, step=0.0001, format="%.6f")
     
     chem1 = st.selectbox("Chemical 1", ["nan", "HClO", "FeCl3", "FerSol", "Poly", "NaOH", "KFerSol", "PAC", "Iron Sulphate",
                                         "CaOH", "H2O2", "HNO3", "KH2PO4", "VTA", "VAT", "CTAB", "APG", "M40", "Al2(SO4)3",
