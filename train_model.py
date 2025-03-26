@@ -30,9 +30,17 @@ for col in ['chem1', 'chem2', 'chem3', 'chem4', 'chem5', 'chem6']:
     df[col] = le.transform(df[col])  # Encode values
     label_encoders[col] = le  # Store encoder
 
+sector_list = ["nan", "Biofuels", "Chemical logistics", "Chemical production", 
+                "Dairy", "Dairy food/wastewater", "Farming", "Fish (Shrimps processing)", "Fish processing", 
+                "Food", "Food industry", "Food/ wastewater", "Laundry", "PFAS", "PFAS Removal", "Paper", 
+                "Paper recycling", "Plastic", "RWZI", "Steel", "Wastewater", "Wastewater treatment", 
+                "Water treatment Algae", "coatings", "waste management", "Beverages/Waste water"]
+
 # Encode `Sector` separately
 sector_le = LabelEncoder()
-df['Sector'] = sector_le.fit_transform(df['Sector'])
+sector_le.fit(sector_list)  # Ensure all values are included
+df['Sector'] = df['Sector'].apply(lambda x: x if x in sector_list else "nan")  # Handle unseen labels
+df['Sector'] = sector_le.transform(df['Sector'])  # Encode values
 label_encoders["Sector"] = sector_le  # Store the sector encoder
 
 # Select features & target
